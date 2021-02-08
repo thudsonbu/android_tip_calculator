@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Base App Layout -->
+<LinearLayout xmlns:adroid="http://schemas.android.com/apk'res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#000000">
+
+    <!-- App Title -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textColor="#ffffff"
+        android:background="#064cd5"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textWeight="700"
+        android:textAllCaps="true">
+    </TextView>
+
+    <!-- Check Amount Container -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:text="@string/check_amount"
+            android:textColor="#064cd5"
+            android:textSize="30dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_check_amount"
+            android:textAlignment="textEnd"
+            android:textColor="#ffffff"
+            android:textSize="35dp">
+        </EditText>
+
+    </LinearLayout>
+
+    <!-- Number of People Container -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number_of_people"
+            android:textColor="#064cd5"
+            android:textSize="30dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_number_of_people"
+            android:textAlignment="textEnd"
+            android:textColor="#ffffff"
+            android:textSize="35dp">
+        </EditText>
+
+    </LinearLayout>
+
+    <!-- Number of People Container -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_percentage"
+            android:textColor="#064cd5"
+            android:textSize="30dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_tip_percentage"
+            android:textAlignment="textEnd"
+            android:textColor="#ffffff"
+            android:textSize="35dp">
+        </EditText>
+
+    </LinearLayout>
+
+</LinearLayout>
