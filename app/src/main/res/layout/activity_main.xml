@@ -37,12 +37,14 @@
         </TextView>
 
         <EditText
+            android:id="@+id/checkAmount"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/_check_amount"
             android:textAlignment="textEnd"
             android:textColor="#ffffff"
-            android:textSize="25dp">
+            android:textSize="25dp"
+            android:backgroundTint="#ffffff">
         </EditText>
 
     </LinearLayout>
@@ -63,12 +65,14 @@
         </TextView>
 
         <EditText
+            android:id="@+id/people"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/_number_of_people"
             android:textAlignment="textEnd"
             android:textColor="#ffffff"
-            android:textSize="25dp">
+            android:textSize="25dp"
+            android:backgroundTint="#ffffff">
         </EditText>
 
     </LinearLayout>
@@ -89,18 +93,21 @@
         </TextView>
 
         <EditText
+            android:id="@+id/tipPercentage"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/_tip_percentage"
             android:textAlignment="textEnd"
             android:textColor="#ffffff"
-            android:textSize="25dp">
+            android:textSize="25dp"
+            android:backgroundTint="#ffffff">
         </EditText>
 
     </LinearLayout>
 
     <!-- Calculate Button -->
     <Button
+        android:id="@+id/calculateButton"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginTop="15dp"
@@ -129,6 +136,7 @@
             android:layout_columnSpan="1"
             android:layout_rowSpan="1">
 
+            <!-- Total bill label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -140,7 +148,9 @@
                 android:layout_rowSpan="1">
             </TextView>
 
+            <!-- Total bill output -->
             <TextView
+                android:id="@+id/totalBill"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/_total_bill"
@@ -164,6 +174,7 @@
             android:layout_columnSpan="1"
             android:layout_rowSpan="1">
 
+            <!-- Total per person label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -175,7 +186,9 @@
                 android:layout_rowSpan="1">
             </TextView>
 
+            <!-- Total per person output -->
             <TextView
+                android:id="@+id/totalPerPerson"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/_total_per_person"
@@ -199,6 +212,7 @@
             android:layout_columnSpan="1"
             android:layout_rowSpan="1">
 
+            <!-- Total tip label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -210,7 +224,9 @@
                 android:layout_rowSpan="1">
             </TextView>
 
+            <!-- Total tip output -->
             <TextView
+                android:id="@+id/totalTip"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/_total_tip"
@@ -234,6 +250,7 @@
             android:layout_columnSpan="1"
             android:layout_rowSpan="1">
 
+            <!-- Tip per person label -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -245,7 +262,9 @@
                 android:layout_rowSpan="1">
             </TextView>
 
+            <!-- Tip per person output -->
             <TextView
+                android:id="@+id/tipPerPerson"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="@string/_tip_per_person"

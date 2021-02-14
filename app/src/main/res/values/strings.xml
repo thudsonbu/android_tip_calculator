@@ -16,4 +16,5 @@
     <string name="total_tip"        >Total Tip</string>
     <string name="_tip_per_person"  >0</string>
     <string name="tip_per_person"   >Tip Per Person</string>
+    <string name="dollar_formatter" >$ %1$s</string>
 </resources>
