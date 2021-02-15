@@ -26,6 +26,7 @@
         android:layout_width="380dp"
         android:layout_height="70dp"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:padding="5dp">
 
         <TextView
