@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                double[] values = validateValues();
 
-               if ( values.length == 0 ) return;
+               if ( values.length == 0 ) return; // length of zero indicates failure
 
                double[] calculatedValues = calculateValues( values );
 
@@ -85,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
             return out;
 
-        } catch (Error err) {
+        } catch (Exception err) {
             // Send message after invalid input
             Toast.makeText(this, "Invalid Input", Toast.LENGTH_LONG).show();
         }
 
-        return new double[3]; // return empty if fail
+        return new double[0]; // return empty if fail
     }
 
     /**
