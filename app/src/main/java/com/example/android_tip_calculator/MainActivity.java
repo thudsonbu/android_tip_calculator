@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button calculateButton;
 
     // formatter
-    private static DecimalFormat df = new DecimalFormat("##,###.00");
+    private static DecimalFormat df = new DecimalFormat("##,##0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
