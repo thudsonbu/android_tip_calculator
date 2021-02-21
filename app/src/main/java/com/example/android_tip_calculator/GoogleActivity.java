@@ -3,6 +3,7 @@ package com.example.android_tip_calculator;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -28,6 +29,10 @@ public class GoogleActivity extends AppCompatActivity {
         searchBar    = (EditText)findViewById(R.id.search_bar);
         searchButton = (Button)findViewById(R.id.search_button);
         web          = (WebView)findViewById(R.id.web_view);
+
+        // setup webview
+        web.getSettings().setJavaScriptEnabled(true);
+        web.setWebViewClient( new WebViewClient() );
 
         searchButton.setOnClickListener( new View.OnClickListener() {
             @Override

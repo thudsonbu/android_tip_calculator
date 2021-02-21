@@ -27,5 +27,5 @@
 
     </application>
 
-    <uses-permission android:name="android.permission.Internet" />
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
