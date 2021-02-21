@@ -1,13 +1,14 @@
 package com.example.android_tip_calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -74,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
         googleButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Clicked google button");
+                Intent search = new Intent(MainActivity.this, GoogleActivity.class );
+                MainActivity.this.startActivity(search);
             }
         });
 
