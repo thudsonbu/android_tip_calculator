@@ -7,6 +7,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcherOwner;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GoogleActivity extends AppCompatActivity {
@@ -34,6 +36,7 @@ public class GoogleActivity extends AppCompatActivity {
         web.getSettings().setJavaScriptEnabled(true);
         web.setWebViewClient( new WebViewClient() );
 
+        // search bar
         searchButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +47,18 @@ public class GoogleActivity extends AppCompatActivity {
                 web.loadUrl(searchedText);
             }
         });
+
+        // back button
+        OnBackPressedCallback back = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed(){
+                // if there webview can go back go back
+                if ( web.canGoBack() ) web.goBack();
+            }
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, back);
+
     }
 
 }
