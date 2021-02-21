@@ -121,7 +121,7 @@
     <!-- Output Area -->
     <GridLayout
         android:layout_width="380dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="10dp"
         android:columnCount="2"
@@ -131,7 +131,7 @@
         <!-- Inner Box Total Bill -->
         <GridLayout
             android:layout_width="190dp"
-            android:layout_height="125dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:columnCount="1"
             android:rowCount="2"
@@ -170,7 +170,7 @@
         <!-- Inner Box Total Per Person -->
         <GridLayout
             android:layout_width="190dp"
-            android:layout_height="125dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:columnCount="1"
             android:rowCount="2"
@@ -209,7 +209,7 @@
         <!-- Inner Box Total Tip -->
         <GridLayout
             android:layout_width="190dp"
-            android:layout_height="125dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:columnCount="1"
             android:rowCount="2"
@@ -248,7 +248,7 @@
         <!-- Inner Box Tip Per Person -->
         <GridLayout
             android:layout_width="190dp"
-            android:layout_height="125dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:columnCount="1"
             android:rowCount="2"
@@ -285,5 +285,39 @@
         </GridLayout>
 
     </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            android:id="@+id/google"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/google">
+        </Button>
+
+        <Button
+            android:id="@+id/maps"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/maps">
+        </Button>
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/call">
+        </Button>
+
+    </LinearLayout>
 
 </LinearLayout>

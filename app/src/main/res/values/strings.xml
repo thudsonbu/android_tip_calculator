@@ -17,4 +17,7 @@
     <string name="_tip_per_person"  >0</string>
     <string name="tip_per_person"   >Tip Per Person</string>
     <string name="dollar_formatter" >$ %1$s</string>
+    <string name="google"           >Google</string>
+    <string name="call"             >Call</string>
+    <string name="maps"              >Maps</string>
 </resources>

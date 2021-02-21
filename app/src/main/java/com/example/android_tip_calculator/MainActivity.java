@@ -25,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView totalTip;
     private TextView tipPerPerson;
 
-    // calculate button
+    // buttons
     private Button calculateButton;
+    private Button googleButton;
+    private Button mapsButton;
+    private Button callButton;
 
     // formatter
     private static DecimalFormat df = new DecimalFormat("##,##0.00");
@@ -47,10 +50,13 @@ public class MainActivity extends AppCompatActivity {
         totalTip       = (TextView)findViewById(R.id.totalTip);
         tipPerPerson   = (TextView)findViewById(R.id.tipPerPerson);
 
-        // assign button
+        // assign buttons
         calculateButton = (Button)findViewById(R.id.calculateButton);
+        googleButton    = (Button)findViewById(R.id.google);
+        mapsButton      = (Button)findViewById(R.id.maps);
+        callButton      = (Button)findViewById(R.id.call);
 
-        // add button listener
+        // add calculate button listener
         calculateButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +67,30 @@ public class MainActivity extends AppCompatActivity {
                double[] calculatedValues = calculateValues( values );
 
                setValues( calculatedValues );
+            }
+        });
+
+        // add google button listener
+        googleButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Clicked google button");
+            }
+        });
+
+        // add maps button listener
+        mapsButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Clicked maps button");
+            }
+        });
+
+        // add call button listener
+        callButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Clicked call button");
             }
         });
     }
