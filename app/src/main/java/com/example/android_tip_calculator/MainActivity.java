@@ -1,6 +1,9 @@
 package com.example.android_tip_calculator;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -31,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private Button googleButton;
     private Button mapsButton;
     private Button callButton;
+
+    // permission constant
+    int CALL_PERMISSION;
 
     // formatter
     private static DecimalFormat df = new DecimalFormat("##,##0.00");
@@ -92,7 +100,28 @@ public class MainActivity extends AppCompatActivity {
         callButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Clicked call button");
+                // setup implicit intent
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:7818912000"));
+
+                // check permissions
+                if (ContextCompat.checkSelfPermission(MainActivity.this,
+                        Manifest.permission.CALL_PHONE)
+                        != PackageManager.PERMISSION_GRANTED) {
+
+                    // request permissions ( will pop up with dialog ) required for current api
+                    ActivityCompat.requestPermissions(MainActivity.this,
+                            new String[]{Manifest.permission.CALL_PHONE},
+                            CALL_PERMISSION);
+
+                } else {
+                    //You already have permission
+                    try {
+                        startActivity(callIntent);
+                    } catch(SecurityException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }
