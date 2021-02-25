@@ -93,7 +93,14 @@ public class MainActivity extends AppCompatActivity {
         mapsButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Clicked maps button");
+                // setup implicit intent
+                Uri mapsUri = Uri.parse("geo:42.3889167, -71.2208033?z=18");
+                Intent mapsIntent = new Intent(Intent.ACTION_VIEW, mapsUri );
+
+                PackageManager pm = getPackageManager();
+
+                System.out.println( mapsIntent.resolveActivity(pm) );
+                startActivity(mapsIntent);
             }
         });
 
@@ -125,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     @Override
@@ -138,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Happy Searching :)", Toast.LENGTH_LONG).show();
             }
             if (resultCode == Activity.RESULT_CANCELED) {
-                Toast.makeText(this, "Happy Searching :)", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Sorry :(", Toast.LENGTH_LONG).show();
             }
         }
     }
