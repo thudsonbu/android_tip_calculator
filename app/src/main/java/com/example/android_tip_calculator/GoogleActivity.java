@@ -1,5 +1,6 @@
 package com.example.android_tip_calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -18,6 +19,7 @@ public class GoogleActivity extends AppCompatActivity {
 
     // buttons
     private Button searchButton;
+    private Button homeButton;
 
     // webview
     private WebView web;
@@ -30,6 +32,7 @@ public class GoogleActivity extends AppCompatActivity {
         // register layout
         searchBar    = (EditText)findViewById(R.id.search_bar);
         searchButton = (Button)findViewById(R.id.search_button);
+        homeButton   = (Button)findViewById(R.id.home_button);
         web          = (WebView)findViewById(R.id.web_view);
 
         // setup webview
@@ -58,6 +61,17 @@ public class GoogleActivity extends AppCompatActivity {
         };
 
         getOnBackPressedDispatcher().addCallback(this, back);
+
+
+        // home button
+        homeButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resultIntent = new Intent();
+                setResult(RESULT_OK, resultIntent);
+                finish();
+            }
+        });
 
     }
 

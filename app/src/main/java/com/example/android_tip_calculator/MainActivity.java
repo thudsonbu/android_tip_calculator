@@ -1,6 +1,7 @@
 package com.example.android_tip_calculator;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent search = new Intent(MainActivity.this, GoogleActivity.class );
-                MainActivity.this.startActivity(search);
+                MainActivity.this.startActivityForResult(search, 0);
             }
         });
 
@@ -124,6 +125,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 0) {
+            if(resultCode == Activity.RESULT_OK){
+                Toast.makeText(this, "Happy Searching :)", Toast.LENGTH_LONG).show();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                Toast.makeText(this, "Happy Searching :)", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     /**
