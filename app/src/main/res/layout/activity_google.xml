@@ -28,14 +28,8 @@
 
         <Button
             android:id="@+id/search_button"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_margin="10dp"
-            android:textColor="@color/white"
             android:text="@string/search"
-            android:textSize="15dp"
-            android:background="@color/purple_500">
+            style="@style/SmallButton">
         </Button>
 
     </LinearLayout>
@@ -54,11 +48,8 @@
 
         <Button
             android:id="@+id/home_button"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="20dp"
-            android:text="Go Back"
-            android:textSize="30dp">
+            style="@style/BigButton"
+            android:text="Go Back">
         </Button>
 
     </LinearLayout>
